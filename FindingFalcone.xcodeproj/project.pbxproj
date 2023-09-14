@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C9F5EBD7DEA91D9BB732F89 /* Pods_FindingFalcone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16938995B4D729348DEA1E62 /* Pods_FindingFalcone.framework */; };
+		E90961972AB16BFA00BF2286 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90961962AB16BFA00BF2286 /* BaseService.swift */; };
+		E90961992AB16C6600BF2286 /* FalconService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90961982AB16C6600BF2286 /* FalconService.swift */; };
+		E909619C2AB16DF800BF2286 /* PlanetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909619B2AB16DF800BF2286 /* PlanetData.swift */; };
+		E909619E2AB16E5200BF2286 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909619D2AB16E5200BF2286 /* VehicleData.swift */; };
+		E90961A02AB16FEB00BF2286 /* FalconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909619F2AB16FEB00BF2286 /* FalconData.swift */; };
+		E90961A32AB1736700BF2286 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90961A22AB1736700BF2286 /* Encodable.swift */; };
+		E90961A52AB1745800BF2286 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90961A42AB1745800BF2286 /* BaseRepository.swift */; };
+		E90961A72AB1746C00BF2286 /* FalconRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90961A62AB1746C00BF2286 /* FalconRepository.swift */; };
+		E923B8972AB17AB1008FD7B1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923B8962AB17AB1008FD7B1 /* BaseViewModel.swift */; };
+		E923B8992AB17B4B008FD7B1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923B8982AB17B4B008FD7B1 /* SearchViewModel.swift */; };
+		E923B89B2AB17B59008FD7B1 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923B89A2AB17B59008FD7B1 /* ResultViewModel.swift */; };
+		E927B1EA2AAF0CAE000D23E3 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927B1E92AAF0CAE000D23E3 /* ResultView.swift */; };
 		E9722F852AAEC87A0097D565 /* FindingFalconeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9722F842AAEC87A0097D565 /* FindingFalconeApp.swift */; };
 		E9722F872AAEC87A0097D565 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9722F862AAEC87A0097D565 /* ContentView.swift */; };
 		E9722F892AAEC87C0097D565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9722F882AAEC87C0097D565 /* Assets.xcassets */; };
@@ -14,6 +27,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		007A0188EBA5183E14B4C2A5 /* Pods-FindingFalcone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindingFalcone.debug.xcconfig"; path = "Target Support Files/Pods-FindingFalcone/Pods-FindingFalcone.debug.xcconfig"; sourceTree = "<group>"; };
+		16938995B4D729348DEA1E62 /* Pods_FindingFalcone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindingFalcone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70196E5B1F81B3BA12FEB013 /* Pods-FindingFalcone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindingFalcone.release.xcconfig"; path = "Target Support Files/Pods-FindingFalcone/Pods-FindingFalcone.release.xcconfig"; sourceTree = "<group>"; };
+		E90961962AB16BFA00BF2286 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		E90961982AB16C6600BF2286 /* FalconService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconService.swift; sourceTree = "<group>"; };
+		E909619B2AB16DF800BF2286 /* PlanetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetData.swift; sourceTree = "<group>"; };
+		E909619D2AB16E5200BF2286 /* VehicleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
+		E909619F2AB16FEB00BF2286 /* FalconData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconData.swift; sourceTree = "<group>"; };
+		E90961A22AB1736700BF2286 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		E90961A42AB1745800BF2286 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		E90961A62AB1746C00BF2286 /* FalconRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconRepository.swift; sourceTree = "<group>"; };
+		E923B8962AB17AB1008FD7B1 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		E923B8982AB17B4B008FD7B1 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		E923B89A2AB17B59008FD7B1 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		E927B1E92AAF0CAE000D23E3 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		E9722F812AAEC87A0097D565 /* FindingFalcone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindingFalcone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9722F842AAEC87A0097D565 /* FindingFalconeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingFalconeApp.swift; sourceTree = "<group>"; };
 		E9722F862AAEC87A0097D565 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +54,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9F5EBD7DEA91D9BB732F89 /* Pods_FindingFalcone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E65AEBE83EF95F89A0F6054 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				007A0188EBA5183E14B4C2A5 /* Pods-FindingFalcone.debug.xcconfig */,
+				70196E5B1F81B3BA12FEB013 /* Pods-FindingFalcone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E90961942AB16BC500BF2286 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E90961962AB16BFA00BF2286 /* BaseService.swift */,
+				E90961982AB16C6600BF2286 /* FalconService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E90961952AB16BD900BF2286 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				E90961A42AB1745800BF2286 /* BaseRepository.swift */,
+				E90961A62AB1746C00BF2286 /* FalconRepository.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		E909619A2AB16DD800BF2286 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E909619B2AB16DF800BF2286 /* PlanetData.swift */,
+				E909619D2AB16E5200BF2286 /* VehicleData.swift */,
+				E909619F2AB16FEB00BF2286 /* FalconData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E90961A12AB1735700BF2286 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E90961A22AB1736700BF2286 /* Encodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E923B8952AB17A90008FD7B1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E923B8962AB17AB1008FD7B1 /* BaseViewModel.swift */,
+				E923B8982AB17B4B008FD7B1 /* SearchViewModel.swift */,
+				E923B89A2AB17B59008FD7B1 /* ResultViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		E9722F782AAEC87A0097D565 = {
 			isa = PBXGroup;
 			children = (
 				E9722F832AAEC87A0097D565 /* FindingFalcone */,
 				E9722F822AAEC87A0097D565 /* Products */,
+				9E65AEBE83EF95F89A0F6054 /* Pods */,
+				F09603C930466EC942F2923E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +137,16 @@
 		E9722F832AAEC87A0097D565 /* FindingFalcone */ = {
 			isa = PBXGroup;
 			children = (
+				E923B8952AB17A90008FD7B1 /* ViewModels */,
+				E90961A12AB1735700BF2286 /* Extensions */,
+				E909619A2AB16DD800BF2286 /* Models */,
+				E90961952AB16BD900BF2286 /* Repos */,
+				E90961942AB16BC500BF2286 /* Services */,
 				E9722F842AAEC87A0097D565 /* FindingFalconeApp.swift */,
 				E9722F862AAEC87A0097D565 /* ContentView.swift */,
 				E9722F882AAEC87C0097D565 /* Assets.xcassets */,
 				E9722F8A2AAEC87C0097D565 /* Preview Content */,
+				E927B1E92AAF0CAE000D23E3 /* ResultView.swift */,
 			);
 			path = FindingFalcone;
 			sourceTree = "<group>";
@@ -67,6 +159,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F09603C930466EC942F2923E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16938995B4D729348DEA1E62 /* Pods_FindingFalcone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9722F8F2AAEC87C0097D565 /* Build configuration list for PBXNativeTarget "FindingFalcone" */;
 			buildPhases = (
+				5701785A8C886D152C668254 /* [CP] Check Pods Manifest.lock */,
 				E9722F7D2AAEC87A0097D565 /* Sources */,
 				E9722F7E2AAEC87A0097D565 /* Frameworks */,
 				E9722F7F2AAEC87A0097D565 /* Resources */,
+				0BC4C88FFF56B0FCAFC61586 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +234,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BC4C88FFF56B0FCAFC61586 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindingFalcone/Pods-FindingFalcone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindingFalcone/Pods-FindingFalcone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindingFalcone/Pods-FindingFalcone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5701785A8C886D152C668254 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindingFalcone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E9722F7D2AAEC87A0097D565 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90961A02AB16FEB00BF2286 /* FalconData.swift in Sources */,
+				E923B89B2AB17B59008FD7B1 /* ResultViewModel.swift in Sources */,
+				E90961A32AB1736700BF2286 /* Encodable.swift in Sources */,
+				E90961972AB16BFA00BF2286 /* BaseService.swift in Sources */,
+				E90961A72AB1746C00BF2286 /* FalconRepository.swift in Sources */,
 				E9722F872AAEC87A0097D565 /* ContentView.swift in Sources */,
+				E923B8992AB17B4B008FD7B1 /* SearchViewModel.swift in Sources */,
+				E923B8972AB17AB1008FD7B1 /* BaseViewModel.swift in Sources */,
 				E9722F852AAEC87A0097D565 /* FindingFalconeApp.swift in Sources */,
+				E927B1EA2AAF0CAE000D23E3 /* ResultView.swift in Sources */,
+				E90961992AB16C6600BF2286 /* FalconService.swift in Sources */,
+				E909619E2AB16E5200BF2286 /* VehicleData.swift in Sources */,
+				E90961A52AB1745800BF2286 /* BaseRepository.swift in Sources */,
+				E909619C2AB16DF800BF2286 /* PlanetData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +417,7 @@
 		};
 		E9722F902AAEC87C0097D565 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007A0188EBA5183E14B4C2A5 /* Pods-FindingFalcone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +446,7 @@
 		};
 		E9722F912AAEC87C0097D565 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70196E5B1F81B3BA12FEB013 /* Pods-FindingFalcone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
