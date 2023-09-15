@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SearchView.swift
 //  FindingFalcone
 //
 //  Created by Mahi Garg on 11/09/23.
@@ -7,13 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SearchView: View {
     
     @StateObject var viewModel = SearchViewModel()
     
     @State var isDestinationActive = false
-    @State var selectedVehicle: Int = 0
-    @State var selectedPlanet: Int = 0
     
     var body: some View {
         NavigationView {
@@ -40,8 +38,7 @@ struct ContentView: View {
                     }
                 }
                 VStack {
-                    Text("Time Taken by (\(selectedPlanet <= selectedVehicle ? selectedPlanet : selectedVehicle )/4): \(viewModel.timeTaken)")
-                        .font(.headline)
+                    timeTakenView
                     findFalconeButton
                 }
                     .frame(maxWidth: .infinity)
@@ -51,21 +48,22 @@ struct ContentView: View {
         }
     }
     
+    var timeTakenView: some View {
+        Text("Time Taken by (\(viewModel.selectedPlanet <= viewModel.selectedVehicle ? viewModel.selectedPlanet : viewModel.selectedVehicle )/4): \(viewModel.timeTaken)")
+            .font(.headline)
+    }
+    
     var findFalconeButton: some View {
         Button(action: {
             viewModel.setupRequestParameter {
                 isDestinationActive = true
             }
         }, label: {
-            Text("Find Falcone")
-                .padding(4)
-                .border(.black)
+            primaryButton("Find Falcone")
 
         })
         .accentColor(.black)
         .disabled(viewModel.findFalconePlanet.contains { $0.name == "Select" } || viewModel.findFalconeVehicle.contains { $0.name == "" })
-        
-        
     }
     
     var resetButton: some View {
@@ -83,8 +81,7 @@ struct ContentView: View {
             Menu {
                 ForEach(showPlanets, id: \.self) { planet in
                     Button(action: {
-                        viewModel.findFalconePlanet[index] = planet
-                        selectedPlanet = viewModel.findFalconePlanet.filter { $0.name != "Select" }.count
+                        viewModel.selectPlanet(planet, index)
                     },
                            label: { Text(planet.name) }
                     )
@@ -93,9 +90,13 @@ struct ContentView: View {
                 selectbutton(index: index)
             }
             
-            VStack(alignment: .leading) {
-                ForEach(viewModel.vehicles, id: \.self) { vehicle in
-                    vehicleList(vehicle: vehicle, index: index)
+            if viewModel.findFalconePlanet[index].name != "Select" {
+                VStack(alignment: .leading) {
+                    ForEach(viewModel.vehicles, id: \.self) { vehicle in
+                        if vehicle.maxDistance >= viewModel.findFalconePlanet[index].distance {
+                            vehicleList(vehicle: vehicle, index: index)
+                        }
+                    }
                 }
             }
         }
@@ -103,9 +104,7 @@ struct ContentView: View {
     
     func vehicleList(vehicle: VehicleData, index: Int)-> some View {
         Button(action: {
-            viewModel.findFalconeVehicle[index] = vehicle
-            viewModel.timeTaken += viewModel.findFalconePlanet[index].distance / vehicle.speed
-            selectedVehicle = viewModel.findFalconeVehicle.filter { $0.name != "" }.count
+            viewModel.selectVehicle(vehicle, index)
         }) {
             HStack {
                 Image(systemName: viewModel.findFalconeVehicle[index] == vehicle ?  "checkmark.circle.fill" : "circle")
@@ -121,9 +120,22 @@ struct ContentView: View {
         HStack {
             Text(viewModel.findFalconePlanet[index].name)
             Image(systemName: "arrowtriangle.down.fill")
+                .padding(.leading)
         }
-        .frame(width: 102)
+        .frame(width: 124)
         .padding(8)
         .border(.black)
     }
+}
+
+func primaryButton(_ name: String)-> some View {
+    Text(name)
+        .frame(width: 102, height: 36)
+        .padding(4)
+        .background(Color.white)
+        .cornerRadius(16)
+        .shadow(color: .black,
+                radius: 4,
+                x: 0,
+                y: 4)
 }

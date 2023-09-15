@@ -29,10 +29,7 @@ struct ResultView: View {
                     .multilineTextAlignment(.center)
                     .padding(24)
             }
-            
-            Text("Start Again")
-                .padding(3)
-                .border(.black)
+            primaryButton("Start Again")
                 .onTapGesture {
                     presentationMode.wrappedValue.dismiss()
                 }

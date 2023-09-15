@@ -21,7 +21,7 @@
 		E923B89B2AB17B59008FD7B1 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923B89A2AB17B59008FD7B1 /* ResultViewModel.swift */; };
 		E927B1EA2AAF0CAE000D23E3 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927B1E92AAF0CAE000D23E3 /* ResultView.swift */; };
 		E9722F852AAEC87A0097D565 /* FindingFalconeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9722F842AAEC87A0097D565 /* FindingFalconeApp.swift */; };
-		E9722F872AAEC87A0097D565 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9722F862AAEC87A0097D565 /* ContentView.swift */; };
+		E9722F872AAEC87A0097D565 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9722F862AAEC87A0097D565 /* SearchView.swift */; };
 		E9722F892AAEC87C0097D565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9722F882AAEC87C0097D565 /* Assets.xcassets */; };
 		E9722F8C2AAEC87C0097D565 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9722F8B2AAEC87C0097D565 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -44,7 +44,7 @@
 		E927B1E92AAF0CAE000D23E3 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		E9722F812AAEC87A0097D565 /* FindingFalcone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindingFalcone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9722F842AAEC87A0097D565 /* FindingFalconeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingFalconeApp.swift; sourceTree = "<group>"; };
-		E9722F862AAEC87A0097D565 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9722F862AAEC87A0097D565 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E9722F882AAEC87C0097D565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9722F8B2AAEC87C0097D565 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +106,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E921ECBE2AB44CD100AFBC42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9722F862AAEC87A0097D565 /* SearchView.swift */,
+				E927B1E92AAF0CAE000D23E3 /* ResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E923B8952AB17A90008FD7B1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,16 +146,14 @@
 		E9722F832AAEC87A0097D565 /* FindingFalcone */ = {
 			isa = PBXGroup;
 			children = (
+				E921ECBE2AB44CD100AFBC42 /* Views */,
 				E923B8952AB17A90008FD7B1 /* ViewModels */,
-				E90961A12AB1735700BF2286 /* Extensions */,
 				E909619A2AB16DD800BF2286 /* Models */,
 				E90961952AB16BD900BF2286 /* Repos */,
 				E90961942AB16BC500BF2286 /* Services */,
 				E9722F842AAEC87A0097D565 /* FindingFalconeApp.swift */,
-				E9722F862AAEC87A0097D565 /* ContentView.swift */,
 				E9722F882AAEC87C0097D565 /* Assets.xcassets */,
 				E9722F8A2AAEC87C0097D565 /* Preview Content */,
-				E927B1E92AAF0CAE000D23E3 /* ResultView.swift */,
 			);
 			path = FindingFalcone;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 		E9722F8A2AAEC87C0097D565 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				E90961A12AB1735700BF2286 /* Extensions */,
 				E9722F8B2AAEC87C0097D565 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -286,7 +294,7 @@
 				E90961A32AB1736700BF2286 /* Encodable.swift in Sources */,
 				E90961972AB16BFA00BF2286 /* BaseService.swift in Sources */,
 				E90961A72AB1746C00BF2286 /* FalconRepository.swift in Sources */,
-				E9722F872AAEC87A0097D565 /* ContentView.swift in Sources */,
+				E9722F872AAEC87A0097D565 /* SearchView.swift in Sources */,
 				E923B8992AB17B4B008FD7B1 /* SearchViewModel.swift in Sources */,
 				E923B8972AB17AB1008FD7B1 /* BaseViewModel.swift in Sources */,
 				E9722F852AAEC87A0097D565 /* FindingFalconeApp.swift in Sources */,

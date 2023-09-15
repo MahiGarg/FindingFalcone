@@ -8,7 +8,9 @@
 import Foundation
 
 class ResultViewModel: BaseViewModel, ObservableObject {
-    @Published var findResponse: FindResponse = FindResponse(planetName: "", status: "", error: "")
+    @Published var findResponse: FindResponse = FindResponse(planetName: "",
+                                                             status: "",
+                                                             error: "")
 }
 
 extension ResultViewModel {
