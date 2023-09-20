@@ -61,6 +61,10 @@ class SearchViewModel: BaseViewModel, ObservableObject {
         self.timeTaken += self.findFalconePlanet[index].distance / vehicle.speed
         self.selectedVehicle = self.findFalconeVehicle.filter { $0.name != "" }.count
     }
+    
+    func vehicleCount(_ vehicle: VehicleData)-> Int {
+        return vehicle.totalNo - self.findFalconeVehicle.filter { item in item.name == vehicle.name }.count
+    }
 }
 
 extension SearchViewModel {

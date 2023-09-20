@@ -25,7 +25,7 @@ struct SearchView: View {
                             destination(index: index)
                         }
                         
-                        NavigationLink(destination: ResultView(findRequest: Binding.constant(viewModel.findRequest)).navigationBarBackButtonHidden(true),
+                        NavigationLink(destination: ResultView(findRequest: Binding.constant(viewModel.findRequest)),//.navigationBarBackButtonHidden(true),
                                        isActive: $isDestinationActive,
                                        label: EmptyView.init)
                     }
@@ -94,7 +94,8 @@ struct SearchView: View {
                 VStack(alignment: .leading) {
                     ForEach(viewModel.vehicles, id: \.self) { vehicle in
                         if vehicle.maxDistance >= viewModel.findFalconePlanet[index].distance {
-                            vehicleList(vehicle: vehicle, index: index)
+                            vehicleList(vehicle: vehicle,
+                                        index: index)
                         }
                     }
                 }
@@ -103,17 +104,17 @@ struct SearchView: View {
     }
     
     func vehicleList(vehicle: VehicleData, index: Int)-> some View {
-        Button(action: {
+        let vehicleCount = viewModel.vehicleCount(vehicle)
+        return Button(action: {
             viewModel.selectVehicle(vehicle, index)
         }) {
+            
             HStack {
                 Image(systemName: viewModel.findFalconeVehicle[index] == vehicle ?  "checkmark.circle.fill" : "circle")
-                Text(vehicle.name + " (" + String(vehicle.totalNo) + ")")
+                Text(vehicle.name + " (" + String(vehicleCount) + ")")
             }
         }
-        .disabled(vehicle.maxDistance < viewModel.findFalconePlanet[index].distance)
-        
-        
+        .disabled(vehicleCount <= 0 && index >= vehicle.totalNo)
     }
     
     func selectbutton(index: Int)-> some View {
