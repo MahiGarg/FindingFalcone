@@ -13,6 +13,7 @@ class ResultViewModel: BaseViewModel, ObservableObject {
                                                              error: "")
 }
 
+//MARK: - ResultViewModel + API Calls
 extension ResultViewModel {
     func findFalcon(findRequest: FindRequest) {
         FalconRepository.instance.findFalcon(request: findRequest) { data in

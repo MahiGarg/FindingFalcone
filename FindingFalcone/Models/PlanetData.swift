@@ -8,8 +8,8 @@
 import Foundation
 
 struct PlanetData: Codable, Hashable {
-    let name: String
-    let distance: Int
+    var name: String
+    var distance: Int
 }
 
 

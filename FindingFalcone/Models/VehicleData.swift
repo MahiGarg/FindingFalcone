@@ -8,10 +8,10 @@
 import Foundation
 
 struct VehicleData: Codable, Hashable {
-    let name: String
-    let totalNo: Int
-    let maxDistance: Int
-    let speed: Int
+    var name: String
+    var totalNo: Int
+    var maxDistance: Int
+    var speed: Int
     
     enum CodingKeys: String, CodingKey {
         case name

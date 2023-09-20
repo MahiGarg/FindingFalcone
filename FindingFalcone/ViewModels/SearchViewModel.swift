@@ -42,11 +42,10 @@ class SearchViewModel: BaseViewModel, ObservableObject {
         self.fetchVehicles()
     }
     
-    func setupRequestParameter(completion: ()-> Void) {
-        self.fetchToken()
+    func setupRequestParameter(completion: @escaping ()-> Void) {
+        self.fetchToken(completion: completion)
         self.findRequest.planetNames = self.findFalconePlanet.map { $0.name }
         self.findRequest.vehicleNames = self.findFalconeVehicle.map { $0.name }
-        completion()
     }
     
     func selectPlanet(_ planet: PlanetData,
@@ -58,8 +57,21 @@ class SearchViewModel: BaseViewModel, ObservableObject {
     func selectVehicle(_ vehicle: VehicleData,
                        _ index: Int) {
         self.findFalconeVehicle[index] = vehicle
-        self.timeTaken += self.findFalconePlanet[index].distance / vehicle.speed
+        self.timeTaken = 0
+        for i in 0...index {
+            self.timeTaken += self.findFalconePlanet[i].distance / self.findFalconeVehicle[i].speed
+        }
         self.selectedVehicle = self.findFalconeVehicle.filter { $0.name != "" }.count
+        for i in (index + 1)..<self.findFalconePlanet.count {
+            self.findFalconePlanet[i].name = "Select"
+            self.findFalconePlanet[i].distance = 0
+        }
+        for i in (index + 1)..<self.findFalconeVehicle.count {
+            self.findFalconeVehicle[i].name = ""
+            self.findFalconeVehicle[i].maxDistance = 0
+            self.findFalconeVehicle[i].totalNo = 0
+            self.findFalconeVehicle[i].speed = 0
+        }
     }
     
     func vehicleCount(_ vehicle: VehicleData)-> Int {
@@ -67,6 +79,7 @@ class SearchViewModel: BaseViewModel, ObservableObject {
     }
 }
 
+//MARK: - SearchViewModel + API Calls
 extension SearchViewModel {
     func fetchPlanets() {
         FalconRepository.instance.getPlanets { data in
@@ -84,13 +97,12 @@ extension SearchViewModel {
         }
     }
     
-    func fetchToken() {
+    func fetchToken(completion: @escaping ()-> Void) {
         FalconRepository.instance.getToken{ data in
             self.findRequest.token = data.token
+            completion()
         } onError: { error in
             self.afError = error
         }
     }
-    
-    
 }

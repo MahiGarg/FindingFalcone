@@ -22,6 +22,7 @@ class BaseService{
             
             switch response.result {
             case .success(let data):
+                print(data)
                 onSuccess(data)
             case .failure(let error):
                 onError(error)
@@ -37,7 +38,7 @@ class BaseService{
         AF.request(BASE_URL + endpoint,
                    method: .post,
                    parameters: body,
-                   encoding: URLEncoding.queryString,
+                   encoding: JSONEncoding.default,
                    headers: header)
         .responseDecodable(of: T.self) { response in
             

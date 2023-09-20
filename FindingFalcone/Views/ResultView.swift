@@ -17,14 +17,14 @@ struct ResultView: View {
         
         VStack(spacing: 24) {
             
-            if viewModel.findResponse.error == "" {
+            if viewModel.findResponse.error == nil {
                 Text("Success! Congratulations on Finding Falcone. King Shah is mighty pleased.")
                     .font(.headline)
                     .multilineTextAlignment(.center)
                     .padding(20)
                 Text("Planet found: \(viewModel.findResponse.planetName!)")
             } else {
-                Text(viewModel.findResponse.error!)
+                Text(viewModel.findResponse.error ?? "")
                     .font(.headline)
                     .multilineTextAlignment(.center)
                     .padding(24)
@@ -45,9 +45,3 @@ struct ResultView: View {
         }
     }
 }
-
-//struct ResultView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResultView()
-//    }
-//}

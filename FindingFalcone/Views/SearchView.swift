@@ -25,7 +25,7 @@ struct SearchView: View {
                             destination(index: index)
                         }
                         
-                        NavigationLink(destination: ResultView(findRequest: Binding.constant(viewModel.findRequest)),//.navigationBarBackButtonHidden(true),
+                        NavigationLink(destination: ResultView(findRequest: Binding.constant(viewModel.findRequest)),
                                        isActive: $isDestinationActive,
                                        label: EmptyView.init)
                     }
@@ -63,7 +63,8 @@ struct SearchView: View {
 
         })
         .accentColor(.black)
-        .disabled(viewModel.findFalconePlanet.contains { $0.name == "Select" } || viewModel.findFalconeVehicle.contains { $0.name == "" })
+        .disabled(viewModel.findFalconePlanet.contains { $0.name == "Select" }
+                  || viewModel.findFalconeVehicle.contains { $0.name == "" })
     }
     
     var resetButton: some View {
@@ -107,14 +108,13 @@ struct SearchView: View {
         let vehicleCount = viewModel.vehicleCount(vehicle)
         return Button(action: {
             viewModel.selectVehicle(vehicle, index)
-        }) {
-            
+        }) {            
             HStack {
                 Image(systemName: viewModel.findFalconeVehicle[index] == vehicle ?  "checkmark.circle.fill" : "circle")
-                Text(vehicle.name + " (" + String(vehicleCount) + ")")
+                Text(vehicle.name + " (" + String(vehicle.totalNo) + ")")
             }
         }
-        .disabled(vehicleCount <= 0 && index >= vehicle.totalNo)
+        .disabled(vehicleCount <= 0)
     }
     
     func selectbutton(index: Int)-> some View {
